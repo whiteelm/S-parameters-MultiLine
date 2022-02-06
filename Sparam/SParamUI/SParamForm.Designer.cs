@@ -29,15 +29,29 @@ namespace SParamUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series25 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series26 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series27 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series28 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series29 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series30 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series31 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series32 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series33 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series34 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series35 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series36 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series37 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series38 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series39 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series40 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DrawButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -49,39 +63,33 @@ namespace SParamUI
             this.FminTextBox = new System.Windows.Forms.TextBox();
             this.NfTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.L = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.S3Label = new System.Windows.Forms.Label();
-            this.S2Label = new System.Windows.Forms.Label();
-            this.S1Label = new System.Windows.Forms.Label();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.mode2 = new System.Windows.Forms.RadioButton();
             this.mode1 = new System.Windows.Forms.RadioButton();
             this.mode0 = new System.Windows.Forms.RadioButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.CL2Label = new System.Windows.Forms.Label();
-            this.CL1Label = new System.Windows.Forms.Label();
+            this.Z4Label = new System.Windows.Forms.Label();
+            this.Z3Label = new System.Windows.Forms.Label();
             this.z4TextBox = new System.Windows.Forms.TextBox();
             this.z3TextBox = new System.Windows.Forms.TextBox();
             this.z2TextBox = new System.Windows.Forms.TextBox();
             this.z1TextBox = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.C = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.L = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Z2Label = new System.Windows.Forms.Label();
+            this.Z1Label = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -116,9 +124,9 @@ namespace SParamUI
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(190, 22);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 13);
+            this.label8.Size = new System.Drawing.Size(63, 13);
             this.label8.TabIndex = 5;
-            this.label8.Text = "Length, mm =";
+            this.label8.Text = "Length, m =";
             // 
             // label7
             // 
@@ -153,7 +161,7 @@ namespace SParamUI
             this.LenTextBox.Name = "LenTextBox";
             this.LenTextBox.Size = new System.Drawing.Size(65, 20);
             this.LenTextBox.TabIndex = 5;
-            this.LenTextBox.Text = "1";
+            this.LenTextBox.Text = "0,001";
             this.LenTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxes_KeyPress);
             // 
             // FmaxTextBox
@@ -194,67 +202,184 @@ namespace SParamUI
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.C,
+            this.L});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.RowHeadersWidth = 55;
+            this.dataGridView1.Size = new System.Drawing.Size(208, 384);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // C
+            // 
+            this.C.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.C.HeaderText = "C, pF/m";
+            this.C.Name = "C";
+            // 
+            // L
+            // 
+            this.L.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.L.HeaderText = "L, µH/m";
+            this.L.Name = "L";
+            // 
             // chart1
             // 
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.AxisX.Title = "Частота (ГГц)";
-            chartArea3.AxisY.Title = "S-параметры (дБ) ";
-            chartArea3.BorderColor = System.Drawing.Color.Transparent;
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            chartArea2.AxisX.Title = "Частота (ГГц)";
+            chartArea2.AxisY.Title = "S-параметры (дБ) ";
+            chartArea2.BorderColor = System.Drawing.Color.Transparent;
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(6, 42);
             this.chart1.Name = "chart1";
-            series13.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            series13.ChartArea = "ChartArea1";
-            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series13.Color = System.Drawing.Color.Red;
-            series13.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            series13.Legend = "Legend1";
-            series13.MarkerBorderColor = System.Drawing.Color.Red;
-            series13.MarkerColor = System.Drawing.Color.Red;
-            series13.MarkerImageTransparentColor = System.Drawing.Color.Red;
-            series13.Name = "S11";
-            series14.ChartArea = "ChartArea1";
-            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series14.Color = System.Drawing.Color.Red;
-            series14.Legend = "Legend1";
-            series14.Name = "S12";
-            series15.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            series15.ChartArea = "ChartArea1";
-            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series15.Color = System.Drawing.Color.Blue;
-            series15.Legend = "Legend1";
-            series15.Name = "S22";
-            series16.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            series16.ChartArea = "ChartArea1";
-            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series16.Color = System.Drawing.Color.Red;
-            series16.Enabled = false;
-            series16.Legend = "Legend1";
-            series16.Name = "φ11";
-            series17.ChartArea = "ChartArea1";
-            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series17.Color = System.Drawing.Color.Red;
-            series17.Enabled = false;
-            series17.Legend = "Legend1";
-            series17.Name = "φ12";
-            series18.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            series18.ChartArea = "ChartArea1";
-            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series18.Color = System.Drawing.Color.Blue;
-            series18.Enabled = false;
-            series18.Legend = "Legend1";
-            series18.Name = "φ22";
-            this.chart1.Series.Add(series13);
-            this.chart1.Series.Add(series14);
-            this.chart1.Series.Add(series15);
-            this.chart1.Series.Add(series16);
-            this.chart1.Series.Add(series17);
-            this.chart1.Series.Add(series18);
+            series21.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            series21.ChartArea = "ChartArea1";
+            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series21.Color = System.Drawing.Color.Red;
+            series21.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            series21.Legend = "Legend1";
+            series21.MarkerBorderColor = System.Drawing.Color.Red;
+            series21.MarkerColor = System.Drawing.Color.Red;
+            series21.MarkerImageTransparentColor = System.Drawing.Color.Red;
+            series21.Name = "S11";
+            series22.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            series22.ChartArea = "ChartArea1";
+            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series22.Color = System.Drawing.Color.IndianRed;
+            series22.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            series22.Legend = "Legend1";
+            series22.Name = "S12";
+            series23.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
+            series23.ChartArea = "ChartArea1";
+            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series23.Color = System.Drawing.Color.Gold;
+            series23.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            series23.Legend = "Legend1";
+            series23.Name = "S13";
+            series24.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            series24.ChartArea = "ChartArea1";
+            series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series24.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            series24.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            series24.Legend = "Legend1";
+            series24.Name = "S14";
+            series25.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            series25.ChartArea = "ChartArea1";
+            series25.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series25.Color = System.Drawing.Color.Fuchsia;
+            series25.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            series25.Legend = "Legend1";
+            series25.Name = "S22";
+            series26.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            series26.ChartArea = "ChartArea1";
+            series26.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series26.Color = System.Drawing.Color.Lime;
+            series26.Legend = "Legend1";
+            series26.Name = "S23";
+            series27.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
+            series27.ChartArea = "ChartArea1";
+            series27.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series27.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            series27.Legend = "Legend1";
+            series27.Name = "S24";
+            series28.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            series28.ChartArea = "ChartArea1";
+            series28.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series28.Color = System.Drawing.Color.Black;
+            series28.Legend = "Legend1";
+            series28.Name = "S33";
+            series29.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
+            series29.ChartArea = "ChartArea1";
+            series29.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series29.Color = System.Drawing.Color.Gray;
+            series29.Legend = "Legend1";
+            series29.Name = "S34";
+            series30.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            series30.ChartArea = "ChartArea1";
+            series30.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series30.Color = System.Drawing.Color.Blue;
+            series30.Legend = "Legend1";
+            series30.Name = "S44";
+            series31.ChartArea = "ChartArea1";
+            series31.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series31.Legend = "Legend1";
+            series31.Name = "φ11";
+            series32.ChartArea = "ChartArea1";
+            series32.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series32.Legend = "Legend1";
+            series32.Name = "φ12";
+            series33.ChartArea = "ChartArea1";
+            series33.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series33.Legend = "Legend1";
+            series33.Name = "φ13";
+            series34.ChartArea = "ChartArea1";
+            series34.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series34.Legend = "Legend1";
+            series34.Name = "φ14";
+            series35.ChartArea = "ChartArea1";
+            series35.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series35.Legend = "Legend1";
+            series35.Name = "φ22";
+            series36.ChartArea = "ChartArea1";
+            series36.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series36.Legend = "Legend1";
+            series36.Name = "φ23";
+            series37.ChartArea = "ChartArea1";
+            series37.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series37.Legend = "Legend1";
+            series37.Name = "φ24";
+            series38.ChartArea = "ChartArea1";
+            series38.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series38.Legend = "Legend1";
+            series38.Name = "φ33";
+            series39.ChartArea = "ChartArea1";
+            series39.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series39.Legend = "Legend1";
+            series39.Name = "φ34";
+            series40.ChartArea = "ChartArea1";
+            series40.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series40.Legend = "Legend1";
+            series40.Name = "φ44";
+            this.chart1.Series.Add(series21);
+            this.chart1.Series.Add(series22);
+            this.chart1.Series.Add(series23);
+            this.chart1.Series.Add(series24);
+            this.chart1.Series.Add(series25);
+            this.chart1.Series.Add(series26);
+            this.chart1.Series.Add(series27);
+            this.chart1.Series.Add(series28);
+            this.chart1.Series.Add(series29);
+            this.chart1.Series.Add(series30);
+            this.chart1.Series.Add(series31);
+            this.chart1.Series.Add(series32);
+            this.chart1.Series.Add(series33);
+            this.chart1.Series.Add(series34);
+            this.chart1.Series.Add(series35);
+            this.chart1.Series.Add(series36);
+            this.chart1.Series.Add(series37);
+            this.chart1.Series.Add(series38);
+            this.chart1.Series.Add(series39);
+            this.chart1.Series.Add(series40);
             this.chart1.Size = new System.Drawing.Size(511, 370);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
@@ -285,31 +410,11 @@ namespace SParamUI
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.RadioButton2_CheckedChanged);
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Enabled = false;
-            this.checkBox1.Location = new System.Drawing.Point(197, 21);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
-            // 
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.S3Label);
-            this.groupBox3.Controls.Add(this.S2Label);
-            this.groupBox3.Controls.Add(this.S1Label);
-            this.groupBox3.Controls.Add(this.checkBox3);
-            this.groupBox3.Controls.Add(this.checkBox2);
-            this.groupBox3.Controls.Add(this.checkBox1);
             this.groupBox3.Controls.Add(this.radioButton1);
             this.groupBox3.Controls.Add(this.radioButton2);
             this.groupBox3.Controls.Add(this.chart1);
@@ -318,70 +423,6 @@ namespace SParamUI
             this.groupBox3.Size = new System.Drawing.Size(523, 418);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
-            // 
-            // S3Label
-            // 
-            this.S3Label.AutoSize = true;
-            this.S3Label.Enabled = false;
-            this.S3Label.Location = new System.Drawing.Point(312, 21);
-            this.S3Label.Margin = new System.Windows.Forms.Padding(1, 0, 3, 0);
-            this.S3Label.Name = "S3Label";
-            this.S3Label.Size = new System.Drawing.Size(26, 13);
-            this.S3Label.TabIndex = 10;
-            this.S3Label.Text = "S22";
-            this.S3Label.Click += new System.EventHandler(this.SLabel_Click);
-            // 
-            // S2Label
-            // 
-            this.S2Label.AutoSize = true;
-            this.S2Label.Enabled = false;
-            this.S2Label.Location = new System.Drawing.Point(263, 21);
-            this.S2Label.Margin = new System.Windows.Forms.Padding(1, 0, 3, 0);
-            this.S2Label.Name = "S2Label";
-            this.S2Label.Size = new System.Drawing.Size(26, 13);
-            this.S2Label.TabIndex = 9;
-            this.S2Label.Text = "S12";
-            this.S2Label.Click += new System.EventHandler(this.SLabel_Click);
-            // 
-            // S1Label
-            // 
-            this.S1Label.AutoSize = true;
-            this.S1Label.Enabled = false;
-            this.S1Label.Location = new System.Drawing.Point(214, 21);
-            this.S1Label.Margin = new System.Windows.Forms.Padding(1, 0, 3, 0);
-            this.S1Label.Name = "S1Label";
-            this.S1Label.Size = new System.Drawing.Size(26, 13);
-            this.S1Label.TabIndex = 8;
-            this.S1Label.Text = "S11";
-            this.S1Label.Click += new System.EventHandler(this.SLabel_Click);
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Checked = true;
-            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox3.Enabled = false;
-            this.checkBox3.Location = new System.Drawing.Point(295, 21);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 7;
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Enabled = false;
-            this.checkBox2.Location = new System.Drawing.Point(246, 21);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 6;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // groupBox4
             // 
@@ -432,39 +473,39 @@ namespace SParamUI
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.CL2Label);
-            this.groupBox5.Controls.Add(this.CL1Label);
+            this.groupBox5.Controls.Add(this.Z4Label);
+            this.groupBox5.Controls.Add(this.Z3Label);
             this.groupBox5.Controls.Add(this.z4TextBox);
             this.groupBox5.Controls.Add(this.z3TextBox);
             this.groupBox5.Controls.Add(this.z2TextBox);
             this.groupBox5.Controls.Add(this.z1TextBox);
-            this.groupBox5.Controls.Add(this.label10);
-            this.groupBox5.Controls.Add(this.label9);
+            this.groupBox5.Controls.Add(this.Z2Label);
+            this.groupBox5.Controls.Add(this.Z1Label);
             this.groupBox5.Location = new System.Drawing.Point(160, 12);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(250, 77);
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
             // 
-            // CL2Label
+            // Z4Label
             // 
-            this.CL2Label.AutoSize = true;
-            this.CL2Label.Enabled = false;
-            this.CL2Label.Location = new System.Drawing.Point(121, 46);
-            this.CL2Label.Name = "CL2Label";
-            this.CL2Label.Size = new System.Drawing.Size(35, 13);
-            this.CL2Label.TabIndex = 16;
-            this.CL2Label.Text = "Z4, Ω";
+            this.Z4Label.AutoSize = true;
+            this.Z4Label.Enabled = false;
+            this.Z4Label.Location = new System.Drawing.Point(121, 46);
+            this.Z4Label.Name = "Z4Label";
+            this.Z4Label.Size = new System.Drawing.Size(35, 13);
+            this.Z4Label.TabIndex = 16;
+            this.Z4Label.Text = "Z4, Ω";
             // 
-            // CL1Label
+            // Z3Label
             // 
-            this.CL1Label.AutoSize = true;
-            this.CL1Label.Enabled = false;
-            this.CL1Label.Location = new System.Drawing.Point(121, 22);
-            this.CL1Label.Name = "CL1Label";
-            this.CL1Label.Size = new System.Drawing.Size(35, 13);
-            this.CL1Label.TabIndex = 15;
-            this.CL1Label.Text = "Z3, Ω";
+            this.Z3Label.AutoSize = true;
+            this.Z3Label.Enabled = false;
+            this.Z3Label.Location = new System.Drawing.Point(121, 22);
+            this.Z3Label.Name = "Z3Label";
+            this.Z3Label.Size = new System.Drawing.Size(35, 13);
+            this.Z3Label.TabIndex = 15;
+            this.Z3Label.Text = "Z3, Ω";
             // 
             // z4TextBox
             // 
@@ -500,59 +541,23 @@ namespace SParamUI
             this.z1TextBox.TabIndex = 11;
             this.z1TextBox.Text = "50";
             // 
-            // label10
+            // Z2Label
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 48);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 13);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Z2, Ω";
+            this.Z2Label.AutoSize = true;
+            this.Z2Label.Location = new System.Drawing.Point(9, 48);
+            this.Z2Label.Name = "Z2Label";
+            this.Z2Label.Size = new System.Drawing.Size(35, 13);
+            this.Z2Label.TabIndex = 10;
+            this.Z2Label.Text = "Z2, Ω";
             // 
-            // label9
+            // Z1Label
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 22);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Z1, Ω";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.C,
-            this.L});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.RowHeadersWidth = 55;
-            this.dataGridView1.Size = new System.Drawing.Size(208, 384);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // C
-            // 
-            this.C.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.C.HeaderText = "C, pF/m";
-            this.C.Name = "C";
-            // 
-            // L
-            // 
-            this.L.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.L.HeaderText = "L, µH/m";
-            this.L.Name = "L";
+            this.Z1Label.AutoSize = true;
+            this.Z1Label.Location = new System.Drawing.Point(9, 22);
+            this.Z1Label.Name = "Z1Label";
+            this.Z1Label.Size = new System.Drawing.Size(35, 13);
+            this.Z1Label.TabIndex = 9;
+            this.Z1Label.Text = "Z1, Ω";
             // 
             // SParamForm
             // 
@@ -573,6 +578,7 @@ namespace SParamUI
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -580,7 +586,6 @@ namespace SParamUI
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -601,13 +606,7 @@ namespace SParamUI
         private System.Windows.Forms.Button DrawButton;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label S3Label;
-        private System.Windows.Forms.Label S2Label;
-        private System.Windows.Forms.Label S1Label;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.RadioButton mode2;
         private System.Windows.Forms.RadioButton mode1;
@@ -615,12 +614,12 @@ namespace SParamUI
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox z2TextBox;
         private System.Windows.Forms.TextBox z1TextBox;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label Z2Label;
+        private System.Windows.Forms.Label Z1Label;
         private System.Windows.Forms.TextBox z4TextBox;
         private System.Windows.Forms.TextBox z3TextBox;
-        private System.Windows.Forms.Label CL2Label;
-        private System.Windows.Forms.Label CL1Label;
+        private System.Windows.Forms.Label Z4Label;
+        private System.Windows.Forms.Label Z3Label;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn C;
         private System.Windows.Forms.DataGridViewTextBoxColumn L;
