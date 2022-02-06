@@ -140,6 +140,7 @@ namespace SParameters
                     ((double)Nf - 1) * i;
                 w[i] = 2 * Math.PI * f[i];
             }
+            
             var um = eigen.EigenVectors;
             var dz = Matrix<Complex32>.Build.Dense(4, 4);
             for (var i = 0; i < Z.Length; i++)
@@ -328,7 +329,6 @@ namespace SParameters
                         {
                             ss.Add(2 * (e4 + upsilon[i]).Inverse() - e4);
                         }
-
                         break;
                     }
                 case 1:
@@ -338,10 +338,12 @@ namespace SParameters
                         var z = new List<Matrix<Complex32>>();
                         var zo = new List<Matrix<Complex32>>();
                         var zi = new List<Matrix<Complex32>>();
-                        var dz1 = Matrix<Complex32>.Build.Dense(2, 2, 0);
+                        var dz1 = Matrix<Complex32>.Build.Dense(
+                            2, 2, 0);
                         dz1[0, 0] = dz[0, 0];
                         dz1[1, 1] = dz[1, 1];
-                        var e2 = Matrix<Complex32>.Build.Dense(2, 2, 0);
+                        var e2 = Matrix<Complex32>.Build.Dense(
+                            2, 2, 0);
                         e2[0, 0] = 1;
                         e2[1, 1] = 1;
                         for (var i = 0; i < Nf; i++)
@@ -366,7 +368,7 @@ namespace SParameters
                             meandr[i][7, 7] = (Complex32)1e10;
                             yM[i] = y[i] + meandr[i];
                             z[i] = yM[i].Inverse();
-                            Console.WriteLine(y[i].Inverse());
+                            Console.WriteLine(z[i]);
                             zo[i][0, 0] = z[i][0, 0];
                             zo[i][0, 1] = z[i][0, 3];
                             zo[i][1, 0] = z[i][3, 0];
@@ -391,7 +393,6 @@ namespace SParameters
             var fi11 = new double[Nf];
             var fi12 = new double[Nf];
             var fi13 = new double[Nf];
-
             var s14 = new double[Nf];
             var s22 = new double[Nf];
             var s23 = new double[Nf];
