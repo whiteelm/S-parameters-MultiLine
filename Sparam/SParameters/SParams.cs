@@ -30,7 +30,7 @@ namespace SParameters
         /// <summary>
         /// Индуктивность.
         /// </summary>
-        private readonly double[,] _l = new double[4, 4];
+        private readonly double[,] _l;
 
         /// <summary>
         /// Индуктивность.
@@ -40,9 +40,9 @@ namespace SParameters
             get => _l;
             set
             {
-                for (var i = 0; i < 4; i++)
+                for (var i = 0; i < N; i++)
                 {
-                    for (var j = 0; j < 4; j++)
+                    for (var j = 0; j < N; j++)
                     {
                         _l[i, j] = value[i, j];
                     }
@@ -51,9 +51,31 @@ namespace SParameters
         }
 
         /// <summary>
+        /// Индуктивность.
+        /// </summary>
+        private int _n;
+
+        /// <summary>
+        /// Индуктивность.
+        /// </summary>
+        public int N
+        {
+            get => _n;
+            set
+            {
+                if (value > 6 || value < 2)
+                {
+                    throw new ArgumentException("Number of lines can't be " +
+                                        "less than 2 and more than 6.");
+                }
+                _n = value;
+            }
+        }
+
+        /// <summary>
         /// Ёмкость.
         /// </summary>
-        private readonly double[,] _c = new double[4, 4];
+        private readonly double[,] _c;
 
         /// <summary>
         /// Ёмкость.
@@ -63,9 +85,9 @@ namespace SParameters
             get => _c;
             set
             {
-                for (var i = 0; i < 4; i++)
+                for (var i = 0; i < N; i++)
                 {
-                    for (var j = 0; j < 4; j++)
+                    for (var j = 0; j < N; j++)
                     {
                         _c[i, j] = value[i, j];
                     }
@@ -96,6 +118,7 @@ namespace SParameters
         /// <summary>
         /// Расчёт S-параметров.
         /// </summary>
+        /// <param name="n">Количество линий.</param>
         /// <param name="nf">Количество точек.</param>
         /// <param name="fmin">Начало частотных точек.</param>
         /// <param name="fmax">Конец частотных точек.</param>
@@ -103,9 +126,12 @@ namespace SParameters
         /// <param name="l">Индуктивность.</param>
         /// <param name="c">Ёмкость.</param>
         /// <param name="z">Входная нагрузка.</param>
-        public SParams(int nf, int fmin, int fmax, double len,
+        public SParams(int n, int nf, int fmin, int fmax, double len,
             double[,] l, double[,] c, double[] z)
         {
+            N = n;
+            _l = new double[N, N];
+            _c = new double[N, N];
             Nf = nf;
             Fmin = fmin;
             Fmax = fmax;
@@ -120,9 +146,10 @@ namespace SParameters
         /// <summary>
         /// Расчёт S-параметров.
         /// <param name="mode">Режим:
-        /// 0 - Lange;
-        /// 1 - Meander;
-        /// 2 - InterDigital</param>
+        /// 0 - General;
+        /// 1 - Lange;
+        /// 2 - Meander;
+        /// 3 - InterDigital</param>
         /// </summary>
         public void CalculateSParameters(int mode)
         {
@@ -142,13 +169,21 @@ namespace SParameters
             }
 
             var um = eigen.EigenVectors;
-            var dz = Matrix<Complex>.Build.Dense(4, 4);
-            for (var i = 0; i < Z.Length; i++)
+            var dz = Matrix<Complex>.Build.Dense(N + N, N + N);
+            if (mode == 1)
+            {
+                dz = Matrix<Complex>.Build.Dense(N, N);
+            }
+            if (mode == 2 || mode == 3)
+            {
+                dz = Matrix<Complex>.Build.Dense(2, 2);
+            }
+            for (var i = 0; i < dz.RowCount; i++)
             {
                 dz[i, i] = Math.Sqrt(Z[i]);
             }
-            var v = Matrix<double>.Build.Dense(4, 4);
-            var vivec = Vector<double>.Build.Dense(4);
+            var v = Matrix<double>.Build.Dense(N, N);
+            var vivec = Vector<double>.Build.Dense(N);
             for (var i = 0; i < eps.Count; i++)
             {
                 v[i, i] = c / Math.Sqrt(eps[i]);
@@ -161,7 +196,7 @@ namespace SParameters
 
             for (var i = 0; i < Nf; i++)
             {
-                var tempM = Matrix<Complex>.Build.Dense(4, 4);
+                var tempM = Matrix<Complex>.Build.Dense(N, N);
                 var tempV = (w[i] / vivec) * Len;
 
                 for (var j = 0; j < v.ColumnCount; j++)
@@ -169,7 +204,7 @@ namespace SParameters
                     tempM[j, j] = 1 / Complex.Tanh(tempV[j] * Zi);
                 }
                 co.Add(tempM);
-                var tet = Matrix<Complex>.Build.Dense(4, 4);
+                var tet = Matrix<Complex>.Build.Dense(N, N);
                 for (var j = 0; j < v.ColumnCount; j++)
                 {
                     tet[j, j] = 1 / Complex.Sinh(tempV[j] * Zi);
@@ -179,8 +214,8 @@ namespace SParameters
 
             var yaa = new List<Matrix<Complex>>();
             var yab = new List<Matrix<Complex>>();
-            var imComplex = Matrix<Complex>.Build.Dense(4, 4);
-            var umComplex = Matrix<Complex>.Build.Dense(4, 4);
+            var imComplex = Matrix<Complex>.Build.Dense(N, N);
+            var umComplex = Matrix<Complex>.Build.Dense(N, N);
             for (var i = 0; i < im.ColumnCount; i++)
             {
                 for (var j = 0; j < im.ColumnCount; j++)
@@ -189,108 +224,90 @@ namespace SParameters
                     umComplex[i, j] = um[i, j];
                 }
             }
+            //for (var k = 0; k < Nf; k++)
+            //{
+            //    for (var i = 0; i < im.ColumnCount; i++)
+            //    {
+            //        for (var j = 0; j < im.ColumnCount; j++)
+            //        {
+            //            yaa.Add(Matrix<Complex>.Build.Dense(N, N));
+            //            yab.Add(Matrix<Complex>.Build.Dense(N, N));
+            //            yaa[k][i, j] = i + j;
+            //            yab[k][i, j] = i + j + 10;
+            //        }
+            //    }
+            //}
             for (var i = 0; i < Nf; i++)
             {
                 yaa.Add(imComplex * co[i] * (umComplex.Inverse()));
                 yab.Add(-imComplex * sc[i] * (umComplex.Inverse()));
             }
 
+            var i1 = 0;
+            var j1 = 0;
             var y = new List<Matrix<Complex>>();
             for (var i = 0; i < Nf; i++)
             {
-                var tempY = Matrix<Complex>.Build.Dense(8, 8);
-                tempY[0, 0] = yaa[i][0, 0];
-                tempY[0, 1] = yaa[i][0, 1];
-                tempY[0, 2] = yaa[i][0, 2];
-                tempY[0, 3] = yaa[i][0, 3];
-
-                tempY[0, 4] = yab[i][0, 0];
-                tempY[0, 5] = yab[i][0, 1];
-                tempY[0, 6] = yab[i][0, 2];
-                tempY[0, 7] = yab[i][0, 3];
-
-                tempY[1, 0] = yaa[i][1, 0];
-                tempY[1, 1] = yaa[i][1, 1];
-                tempY[1, 2] = yaa[i][1, 2];
-                tempY[1, 3] = yaa[i][1, 3];
-
-                tempY[1, 4] = yab[i][1, 0];
-                tempY[1, 5] = yab[i][1, 1];
-                tempY[1, 6] = yab[i][1, 2];
-                tempY[1, 7] = yab[i][1, 3];
-
-                tempY[2, 0] = yaa[i][2, 0];
-                tempY[2, 1] = yaa[i][2, 1];
-                tempY[2, 2] = yaa[i][2, 2];
-                tempY[2, 3] = yaa[i][2, 3];
-
-                tempY[2, 4] = yab[i][2, 0];
-                tempY[2, 5] = yab[i][2, 1];
-                tempY[2, 6] = yab[i][2, 2];
-                tempY[2, 7] = yab[i][2, 3];
-
-                tempY[3, 0] = yaa[i][3, 0];
-                tempY[3, 1] = yaa[i][3, 1];
-                tempY[3, 2] = yaa[i][3, 2];
-                tempY[3, 3] = yaa[i][3, 3];
-
-                tempY[3, 4] = yab[i][3, 0];
-                tempY[3, 5] = yab[i][3, 1];
-                tempY[3, 6] = yab[i][3, 2];
-                tempY[3, 7] = yab[i][3, 3];
-
-                tempY[4, 0] = yab[i][0, 0];
-                tempY[4, 1] = yab[i][0, 1];
-                tempY[4, 2] = yab[i][0, 2];
-                tempY[4, 3] = yab[i][0, 3];
-                tempY[4, 4] = yaa[i][0, 0];
-                tempY[4, 5] = yaa[i][0, 1];
-                tempY[4, 6] = yaa[i][0, 2];
-                tempY[4, 7] = yaa[i][0, 3];
-
-                tempY[5, 0] = yab[i][1, 0];
-                tempY[5, 1] = yab[i][1, 1];
-                tempY[5, 2] = yab[i][1, 2];
-                tempY[5, 3] = yab[i][1, 3];
-                tempY[5, 4] = yaa[i][1, 0];
-                tempY[5, 5] = yaa[i][1, 1];
-                tempY[5, 6] = yaa[i][1, 2];
-                tempY[5, 7] = yaa[i][1, 3];
-
-                tempY[6, 0] = yab[i][2, 0];
-                tempY[6, 1] = yab[i][2, 1];
-                tempY[6, 2] = yab[i][2, 2];
-                tempY[6, 3] = yab[i][2, 3];
-                tempY[6, 4] = yaa[i][2, 0];
-                tempY[6, 5] = yaa[i][2, 1];
-                tempY[6, 6] = yaa[i][2, 2];
-                tempY[6, 7] = yaa[i][2, 3];
-
-                tempY[7, 0] = yab[i][3, 0];
-                tempY[7, 1] = yab[i][3, 1];
-                tempY[7, 2] = yab[i][3, 2];
-                tempY[7, 3] = yab[i][3, 3];
-                tempY[7, 4] = yaa[i][3, 0];
-                tempY[7, 5] = yaa[i][3, 1];
-                tempY[7, 6] = yaa[i][3, 2];
-                tempY[7, 7] = yaa[i][3, 3];
+                var tempY = Matrix<Complex>.Build.Dense(N+N, N+N);
+                for (var j = 0; j < N + N; j++)
+                {
+                    for (var k = 0; k < N + N; k++)
+                    {
+                        if ((j < N && k < N) || (j >= N && k >= N))
+                        {
+                            tempY[j, k] = yaa[i][i1, j1];
+                        }
+                        else
+                        {
+                            tempY[j, k] = yab[i][i1, j1];
+                        }
+                        j1++;
+                        if (j1 >= N)
+                        {
+                            j1 = 0;
+                        }
+                    }
+                    i1++;
+                    if (i1 >= N)
+                    {
+                        i1 = 0;
+                    }
+                }
                 y.Add(tempY);
             }
-
-
+            
             var ss = new List<Matrix<Complex>>();
             var dz1 = Matrix<Complex>.Build.Dense(
                 2, 2, 0);
             dz1[0, 0] = dz[0, 0];
             dz1[1, 1] = dz[1, 1];
+            var yN = y[0].ColumnCount;
+            if (mode == 1 && N == 4)
+            {
+                yN = 4;
+            }
+            var eN = Matrix<Complex>.Build.Dense(
+                yN, yN, 0);
+            for (var i = 0; i < yN; i++)
+            {
+                eN[i, i] = 1;
+            }
             switch (mode)
             {
                 case 0:
                     {
+                        for (var i = 0; i < Nf; i++)
+                        {
+                            ss.Add(2 * (eN + dz * y[i] * dz).Inverse() - eN);
+                        }
+                        break;
+                    }
+                case 1:
+                    {
                         var yo = new List<Matrix<Complex>>();
                         for (var i = 0; i < Nf; i++)
                         {
-                            var tempM = Matrix<Complex>.Build.Dense(4, 4);
+                            var tempM = Matrix<Complex>.Build.Dense(N, N);
                             tempM[0, 0] = y[i][0, 0] + y[i][0, 2] + y[i][2, 0] + y[i][2, 2];
                             tempM[0, 1] = y[i][0, 1] + y[i][0, 3] + y[i][2, 1] + y[i][2, 3];
                             tempM[0, 2] = y[i][0, 4] + y[i][0, 6] + y[i][2, 4] + y[i][2, 6];
@@ -320,20 +337,13 @@ namespace SParameters
                             upsilon.Add(u);
                         }
 
-                        var e4 = Matrix<Complex>.Build.Dense(
-                                4, 4, 0);
-                        for (var i = 0; i < e4.ColumnCount; i++)
-                        {
-                            e4[i, i] = 1;
-                        }
-
                         for (var i = 0; i < Nf; i++)
                         {
-                            ss.Add(2 * (e4 + upsilon[i]).Inverse() - e4);
+                            ss.Add(2 * (eN + upsilon[i]).Inverse() - eN);
                         }
                         break;
                     }
-                case 1:
+                case 2:
                     {
                         var meandr = new List<Matrix<Complex>>();
                         var z = new List<Matrix<Complex>>();
@@ -377,7 +387,7 @@ namespace SParameters
                         }
                     }
                     break;
-                case 2:
+                case 3:
                     {
                         var meandr = new List<Matrix<Complex>>();
                         var z = new List<Matrix<Complex>>();
@@ -410,7 +420,7 @@ namespace SParameters
                             meandr[i][6, 6] = 1e-10;
                             yM[i] = y[i] + meandr[i];
                             z[i] = yM[i].Inverse();
-                            
+
                             zo[i][0, 0] = z[i][0, 0];
                             zo[i][0, 1] = z[i][0, 7];
                             zo[i][1, 0] = z[i][7, 0];
@@ -424,71 +434,31 @@ namespace SParameters
                     throw new ArgumentException("Неправильный режим.");
             }
 
-            var s11 = new double[Nf];
-            var s12 = new double[Nf];
-            var s13 = new double[Nf];
-            var fi11 = new double[Nf];
-            var fi12 = new double[Nf];
-            var fi13 = new double[Nf];
-            var s14 = new double[Nf];
-            var s22 = new double[Nf];
-            var s23 = new double[Nf];
-            var s24 = new double[Nf];
-            var s33 = new double[Nf];
-            var s34 = new double[Nf];
-            var s44 = new double[Nf];
-            var fi14 = new double[Nf];
-            var fi22 = new double[Nf];
-            var fi23 = new double[Nf];
-            var fi24 = new double[Nf];
-            var fi33 = new double[Nf];
-            var fi34 = new double[Nf];
-            var fi44 = new double[Nf];
-            for (var i = 1; i < Nf; i++)
+            var nG = N + N;
+            if (mode == 1)
             {
-                s11[i] = 20 * Math.Log10(Complex.Abs(ss[i][0, 0]));
-                s12[i] = 20 * Math.Log10(Complex.Abs(ss[i][0, 1]));
-                s22[i] = 20 * Math.Log10(Complex.Abs(ss[i][1, 1]));
-                fi11[i] = ss[i][0, 0].Phase * 57.3;
-                fi12[i] = ss[i][0, 1].Phase * 57.3;
-                fi22[i] = ss[i][1, 1].Phase * 57.3;
-                if (mode != 0) continue;
-                s13[i] = 20 * Math.Log10(Complex.Abs(ss[i][0, 2]));
-                s14[i] = 20 * Math.Log10(Complex.Abs(ss[i][0, 3]));
-                s23[i] = 20 * Math.Log10(Complex.Abs(ss[i][1, 2]));
-                s24[i] = 20 * Math.Log10(Complex.Abs(ss[i][1, 3]));
-                s33[i] = 20 * Math.Log10(Complex.Abs(ss[i][2, 2]));
-                s34[i] = 20 * Math.Log10(Complex.Abs(ss[i][2, 3]));
-                s44[i] = 20 * Math.Log10(Complex.Abs(ss[i][3, 3]));
-                fi13[i] = ss[i][0, 2].Phase * 57.3;
-                fi14[i] = ss[i][0, 3].Phase * 57.3;
-                fi23[i] = ss[i][1, 2].Phase * 57.3;
-                fi24[i] = ss[i][1, 3].Phase * 57.3;
-                fi33[i] = ss[i][2, 2].Phase * 57.3;
-                fi34[i] = ss[i][2, 3].Phase * 57.3;
-                fi44[i] = ss[i][3, 3].Phase * 57.3;
+                nG = 4;
             }
-            S.Add(s11);
-            S.Add(s12);
-            S.Add(s22);
-            Fi.Add(fi11);
-            Fi.Add(fi12);
-            Fi.Add(fi22);
-            if (mode != 0) return;
-            S.Add(s13);
-            S.Add(s14);
-            S.Add(s23);
-            S.Add(s24);
-            S.Add(s33);
-            S.Add(s34);
-            S.Add(s44);
-            Fi.Add(fi13);
-            Fi.Add(fi14);
-            Fi.Add(fi23);
-            Fi.Add(fi24);
-            Fi.Add(fi33);
-            Fi.Add(fi34);
-            Fi.Add(fi44);
+            if (mode == 2 || mode == 3)
+            {
+                nG = 2;
+            }
+            
+            for (var i = 0; i < nG; i++)
+            {
+                for (var j = i; j < nG; j++)
+                {
+                    var s = new double[Nf];
+                    var fi = new double[Nf];
+                    for (var k = 1; k < Nf; k++)
+                    {
+                        s[k] = 20 * Math.Log10(Complex.Abs(ss[k][i, j]));
+                        fi[k] = ss[k][i, j].Phase * 57.3;
+                    }
+                    S.Add(s);
+                    Fi.Add(fi);
+                }
+            }
         }
     }
 }

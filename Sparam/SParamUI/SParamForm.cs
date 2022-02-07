@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using SParameters;
 
 
@@ -27,6 +29,7 @@ namespace SParamUI
         {
             //try
             //{
+            var n = Convert.ToInt32(NTextBox.Text);
             var mode = 0;
             if (mode0.Checked)
             {
@@ -40,11 +43,15 @@ namespace SParamUI
             {
                 mode = 2;
             }
-            var c = new double[4, 4];
-            var k = 0;
-            for (var i = 0; i < 4; i++)
+            if (mode3.Checked)
             {
-                for (var j = 0; j < 4; j++)
+                mode = 3;
+            }
+            var c = new double[n, n];
+            var k = 0;
+            for (var i = 0; i < n; i++)
+            {
+                for (var j = 0; j < n; j++)
                 {
                     c[i, j] = Convert.ToDouble(dataGridView1.Rows[k].Cells[0].Value);
                     k++;
@@ -52,23 +59,54 @@ namespace SParamUI
             }
 
             k = 0;
-            var l = new double[4, 4];
-            for (var i = 0; i < 4; i++)
+            var l = new double[n, n];
+            for (var i = 0; i < n; i++)
             {
-                for (var j = 0; j < 4; j++)
+                for (var j = 0; j < n; j++)
                 {
                     l[i, j] = Convert.ToDouble(dataGridView1.Rows[k].Cells[1].Value);
                     k++;
                 }
             }
 
-            var z = new double[4];
-            z[0] = Convert.ToDouble(z1TextBox.Text);
-            z[1] = Convert.ToDouble(z2TextBox.Text);
-            z[2] = Convert.ToDouble(z3TextBox.Text);
-            z[3] = Convert.ToDouble(z4TextBox.Text);
+            var zTextBoxes = new List<TextBox>
+            {
+                z1TextBox,
+                z2TextBox,
+                z3TextBox,
+                z4TextBox,
+                z5TextBox,
+                z6TextBox,
+                z7TextBox,
+                z8TextBox,
+                z9TextBox,
+                z10TextBox,
+                z11TextBox,
+                z12TextBox,
+            };
+            var z = new double[n + n];
+            if (mode == 1)
+            {
+                z = new double[4];
+            }
+            else if (mode == 2 || mode == 3)
+            {
+                z = new double[2];
+            }
+            for (var i = 0; i < z.Length; i++)
+            {
+                z[i] = Convert.ToDouble(zTextBoxes[i].Text);
+                if (n == 4 && i == 4 && mode == 1)
+                {
+                    break;
+                }
+                if (n == 4 && i == 2 && (mode == 2 || mode == 3))
+                {
+                    break;
+                }
+            }
             _sParameters = new SParams(
-                Convert.ToInt32(NfTextBox.Text),
+                n, Convert.ToInt32(NfTextBox.Text),
                 Convert.ToInt32(FminTextBox.Text),
                 Convert.ToInt32(FmaxTextBox.Text),
                 Convert.ToDouble(LenTextBox.Text),
@@ -92,9 +130,9 @@ namespace SParamUI
         /// <param name="sParameters"></param>
         private void DrawGraphics(SParams sParameters)
         {
-            for (var i = 0; i < 20; i++)
+            foreach (var t in chart1.Series)
             {
-                chart1.Series[i].Points.Clear();
+                t.Points.Clear();
             }
             var interval = Convert.ToDouble(
                 (Convert.ToDouble(sParameters.Fmax) -
@@ -109,7 +147,7 @@ namespace SParamUI
                 chart1.Series[10].Points.AddXY(points, sParameters.Fi[0][i]);
                 chart1.Series[11].Points.AddXY(points, sParameters.Fi[1][i]);
                 chart1.Series[12].Points.AddXY(points, sParameters.Fi[2][i]);
-                if (mode0.Checked)
+                if (mode1.Checked)
                 {
                     chart1.Series[3].Points.AddXY(points, sParameters.S[3][i]);
                     chart1.Series[4].Points.AddXY(points, sParameters.S[4][i]);
@@ -177,7 +215,7 @@ namespace SParamUI
             chart1.Series[10].Enabled = b;
             chart1.Series[11].Enabled = b;
             chart1.Series[12].Enabled = b;
-            if (!mode0.Checked) return;
+            if (!mode1.Checked) return;
             chart1.Series[3].Enabled = a;
             chart1.Series[4].Enabled = a;
             chart1.Series[5].Enabled = a;
@@ -206,23 +244,16 @@ namespace SParamUI
 
         private void Mode_CheckedChanged(object sender, EventArgs e)
         {
-            if (sender == mode0)
+            if (sender == mode1)
             {
                 z3TextBox.Enabled = true;
                 z4TextBox.Enabled = true;
                 Z3Label.Enabled = true;
                 Z4Label.Enabled = true;
                 Z3Label.Text = @"Z3, Ω";
-                Z4Label.Text = @"Z4, Ω";
+                Z4Label.Text = @"ZN, Ω";
                 z3TextBox.Text = @"50";
                 z4TextBox.Text = @"50";
-            }
-            if (sender == mode1)
-            {
-                z3TextBox.Enabled = false;
-                z4TextBox.Enabled = false;
-                Z3Label.Enabled = false;
-                Z4Label.Enabled = false;
             }
             if (sender == mode2)
             {
@@ -231,46 +262,115 @@ namespace SParamUI
                 Z3Label.Enabled = false;
                 Z4Label.Enabled = false;
             }
+            if (sender == mode3)
+            {
+                z3TextBox.Enabled = false;
+                z4TextBox.Enabled = false;
+                Z3Label.Enabled = false;
+                Z4Label.Enabled = false;
+            }
+        }
+
+        private void GridFill()
+        {
+            switch (NTextBox.Text)
+            {
+                case @"3":
+                    dataGridView1.Rows.Add("105", "0,387");
+                    dataGridView1.Rows.Add("-35", "0,163");
+                    dataGridView1.Rows.Add("-1,5", "0,082");
+                    dataGridView1.Rows.Add("-35", "0,163");
+                    dataGridView1.Rows.Add("122", "0,371");
+                    dataGridView1.Rows.Add("-35", "0,163");
+                    dataGridView1.Rows.Add("-1,5", "0,082");
+                    dataGridView1.Rows.Add("-35", "0,163");
+                    dataGridView1.Rows.Add("105", "0,387");
+                    dataGridView1.Rows[0].HeaderCell.Value = "1 1";
+                    dataGridView1.Rows[1].HeaderCell.Value = "1 2";
+                    dataGridView1.Rows[2].HeaderCell.Value = "1 3";
+                    dataGridView1.Rows[3].HeaderCell.Value = "2 1";
+                    dataGridView1.Rows[4].HeaderCell.Value = "2 2";
+                    dataGridView1.Rows[5].HeaderCell.Value = "2 3";
+                    dataGridView1.Rows[6].HeaderCell.Value = "3 1";
+                    dataGridView1.Rows[7].HeaderCell.Value = "3 2";
+                    dataGridView1.Rows[8].HeaderCell.Value = "3 3";
+                    break;
+                case @"4":
+                    dataGridView1.Rows.Add("111", "0,766");
+                    dataGridView1.Rows.Add("-41", "0,363");
+                    dataGridView1.Rows.Add("-6,6", "0,238");
+                    dataGridView1.Rows.Add("-2,4", "0,172");
+                    dataGridView1.Rows.Add("-41", "0,363");
+                    dataGridView1.Rows.Add("127", "0,757");
+                    dataGridView1.Rows.Add("-39", "0,360");
+                    dataGridView1.Rows.Add("-6,6", "0,238");
+                    dataGridView1.Rows.Add("-6,6", "0,238");
+                    dataGridView1.Rows.Add("-39", "0,360");
+                    dataGridView1.Rows.Add("127", "0,757");
+                    dataGridView1.Rows.Add("-41", "0,363");
+                    dataGridView1.Rows.Add("-2,4", "0,172");
+                    dataGridView1.Rows.Add("-6,6", "0,238");
+                    dataGridView1.Rows.Add("-41", "0,363");
+                    dataGridView1.Rows.Add("111", "0,766");
+                    dataGridView1.Rows[0].HeaderCell.Value = "1 1";
+                    dataGridView1.Rows[1].HeaderCell.Value = "1 2";
+                    dataGridView1.Rows[2].HeaderCell.Value = "1 3";
+                    dataGridView1.Rows[3].HeaderCell.Value = "1 4";
+                    dataGridView1.Rows[4].HeaderCell.Value = "2 1";
+                    dataGridView1.Rows[5].HeaderCell.Value = "2 2";
+                    dataGridView1.Rows[6].HeaderCell.Value = "2 3";
+                    dataGridView1.Rows[7].HeaderCell.Value = "2 4";
+                    dataGridView1.Rows[8].HeaderCell.Value = "3 1";
+                    dataGridView1.Rows[9].HeaderCell.Value = "3 2";
+                    dataGridView1.Rows[10].HeaderCell.Value = "3 3";
+                    dataGridView1.Rows[11].HeaderCell.Value = "3 4";
+                    dataGridView1.Rows[12].HeaderCell.Value = "4 1";
+                    dataGridView1.Rows[13].HeaderCell.Value = "4 2";
+                    dataGridView1.Rows[14].HeaderCell.Value = "4 3";
+                    dataGridView1.Rows[15].HeaderCell.Value = "4 4";
+                    break;
+            }
         }
 
         private void SParamForm_Load(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add("111", "0,766");
-            dataGridView1.Rows.Add("-41", "0,363");
-            dataGridView1.Rows.Add("-6,6", "0,238");
-            dataGridView1.Rows.Add("-2,4", "0,172");
-            dataGridView1.Rows.Add("-41", "0,363");
-            dataGridView1.Rows.Add("127", "0,757");
-            dataGridView1.Rows.Add("-39", "0,360");
-            dataGridView1.Rows.Add("-6,6", "0,238");
-            dataGridView1.Rows.Add("-6,6", "0,238");
-            dataGridView1.Rows.Add("-39", "0,360");
-            dataGridView1.Rows.Add("127", "0,757");
-            dataGridView1.Rows.Add("-41", "0,363");
-            dataGridView1.Rows.Add("-2,4", "0,172");
-            dataGridView1.Rows.Add("-6,6", "0,238");
-            dataGridView1.Rows.Add("-41", "0,363");
-            dataGridView1.Rows.Add("111", "0,766");
-            dataGridView1.Rows[0].HeaderCell.Value = "1 1";
-            dataGridView1.Rows[1].HeaderCell.Value = "1 2";
-            dataGridView1.Rows[2].HeaderCell.Value = "1 3";
-            dataGridView1.Rows[3].HeaderCell.Value = "1 4";
-
-            dataGridView1.Rows[4].HeaderCell.Value = "2 1";
-            dataGridView1.Rows[5].HeaderCell.Value = "2 2";
-            dataGridView1.Rows[6].HeaderCell.Value = "2 3";
-            dataGridView1.Rows[7].HeaderCell.Value = "2 4";
-
-            dataGridView1.Rows[8].HeaderCell.Value = "3 1";
-            dataGridView1.Rows[9].HeaderCell.Value = "3 2";
-            dataGridView1.Rows[10].HeaderCell.Value = "3 3";
-            dataGridView1.Rows[11].HeaderCell.Value = "3 4";
-
-            dataGridView1.Rows[12].HeaderCell.Value = "4 1";
-            dataGridView1.Rows[13].HeaderCell.Value = "4 2";
-            dataGridView1.Rows[14].HeaderCell.Value = "4 3";
-            dataGridView1.Rows[15].HeaderCell.Value = "4 4";
+            GridFill();
             dataGridView1.AllowUserToAddRows = false;
+        }
+
+        private void NTextBox_TextChanged(object sender, EventArgs e)
+        {
+            var n = Convert.ToInt32(NTextBox.Text);
+            if (n < 3 || n > 6)
+            {
+                NTextBox.Text = @"4";
+            }
+
+            if (n != 4)
+            {
+                mode1.Enabled = false;
+                mode2.Enabled = false;
+                mode3.Enabled = false;
+            }
+            else
+            {
+                mode1.Enabled = true;
+                mode2.Enabled = true;
+                mode3.Enabled = true;
+            }
+            dataGridView1.Rows.Clear();
+            dataGridView1.Update();
+
+            GridFill();
+        }
+
+        private void NTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            var number = e.KeyChar;
+            if (!char.IsDigit(number) && number != 8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
