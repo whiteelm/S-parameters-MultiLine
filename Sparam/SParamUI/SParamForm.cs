@@ -329,6 +329,140 @@ namespace SParamUI
                     dataGridView1.Rows[14].HeaderCell.Value = "4 3";
                     dataGridView1.Rows[15].HeaderCell.Value = "4 4";
                     break;
+                case @"5":
+                    dataGridView1.Rows.Add("14,2725", "0,95276");
+                    dataGridView1.Rows.Add("-4,258", "0,42024");
+                    dataGridView1.Rows.Add("-1,562", "0,31561");
+                    dataGridView1.Rows.Add("-0,4172", "0,24516");
+                    dataGridView1.Rows.Add("-0,6212", "0,20493");
+                    dataGridView1.Rows.Add("-4,227", "0,41978");
+                    dataGridView1.Rows.Add("16,0508", "1,11895");
+                    dataGridView1.Rows.Add("-8,249", "0,5982");
+                    dataGridView1.Rows.Add("-0,4753", "0,41767");
+                    dataGridView1.Rows.Add("-0,5516", "0,32697");
+                    dataGridView1.Rows.Add("-1,491", "0,30302");
+                    dataGridView1.Rows.Add("-7,881", "0,57167");
+                    dataGridView1.Rows.Add("23,2231", "0,94304");
+                    dataGridView1.Rows.Add("-8,55", "0,58762");
+                    dataGridView1.Rows.Add("-1,992", "0,43101");
+                    dataGridView1.Rows.Add("-0,4", "0,22614");
+                    dataGridView1.Rows.Add("-0,4304", "0,37993");
+                    dataGridView1.Rows.Add("-8,208", "0,55971");
+                    dataGridView1.Rows.Add("21,2451", "1,0282");
+                    dataGridView1.Rows.Add("-9,341", "0,60617");
+                    dataGridView1.Rows.Add("-0,6199", "0,18794");
+                    dataGridView1.Rows.Add("-0,4644", "0,29225");
+                    dataGridView1.Rows.Add("-1,768", "0,4033");
+                    dataGridView1.Rows.Add("-9,333", "0,60134");
+                    dataGridView1.Rows.Add("18,2616", "0,97608");
+
+                    dataGridView1.Rows[0].HeaderCell.Value = "1 1";
+                    dataGridView1.Rows[1].HeaderCell.Value = "1 2";
+                    dataGridView1.Rows[2].HeaderCell.Value = "1 3";
+                    dataGridView1.Rows[3].HeaderCell.Value = "1 4";
+                    dataGridView1.Rows[4].HeaderCell.Value = "1 5";
+                    dataGridView1.Rows[5].HeaderCell.Value = "2 1";
+                    dataGridView1.Rows[6].HeaderCell.Value = "2 2";
+                    dataGridView1.Rows[7].HeaderCell.Value = "2 3";
+                    dataGridView1.Rows[8].HeaderCell.Value = "2 4";
+                    dataGridView1.Rows[9].HeaderCell.Value = "2 5";
+                    dataGridView1.Rows[10].HeaderCell.Value = "3 1";
+                    dataGridView1.Rows[11].HeaderCell.Value = "3 2";
+                    dataGridView1.Rows[12].HeaderCell.Value = "3 3";
+                    dataGridView1.Rows[13].HeaderCell.Value = "3 4";
+                    dataGridView1.Rows[14].HeaderCell.Value = "3 5";
+                    dataGridView1.Rows[15].HeaderCell.Value = "4 1";
+                    dataGridView1.Rows[16].HeaderCell.Value = "4 2";
+                    dataGridView1.Rows[17].HeaderCell.Value = "4 3";
+                    dataGridView1.Rows[18].HeaderCell.Value = "4 4";
+                    dataGridView1.Rows[19].HeaderCell.Value = "4 5";
+                    dataGridView1.Rows[20].HeaderCell.Value = "5 1";
+                    dataGridView1.Rows[21].HeaderCell.Value = "5 2";
+                    dataGridView1.Rows[22].HeaderCell.Value = "5 3";
+                    dataGridView1.Rows[23].HeaderCell.Value = "5 4";
+                    dataGridView1.Rows[24].HeaderCell.Value = "5 5";
+
+                    break;
+                case @"6":
+                    dataGridView1.Rows.Add("14,6231", "0,8893");
+                    dataGridView1.Rows.Add("-4,716", "0,34256");
+                    dataGridView1.Rows.Add("-1,077", "0,18835");
+                    dataGridView1.Rows.Add("-0,2762", "0,11636");
+                    dataGridView1.Rows.Add("-0,1482", "0,08904");
+                    dataGridView1.Rows.Add("-0,2107", "0,06916");
+
+                    dataGridView1.Rows.Add("-4,716", "0,342565");
+                    dataGridView1.Rows.Add("15,192", "0,96152");
+                    dataGridView1.Rows.Add("-4,918", "0,35157");
+                    dataGridView1.Rows.Add("-0,4365", "0,19378");
+                    dataGridView1.Rows.Add("-0,1928", "0,14143");
+                    dataGridView1.Rows.Add("-0,2362", "0,10499");
+
+                    dataGridView1.Rows.Add("-1,077", "0,18835");
+                    dataGridView1.Rows.Add("-4,918", "0,35157");
+                    dataGridView1.Rows.Add("18,0454", "0,85423");
+                    dataGridView1.Rows.Add("-5,43", "0,37231");
+                    dataGridView1.Rows.Add("-0,8435", "0,25063");
+                    dataGridView1.Rows.Add("-0,7148", "0,17322");
+
+                    dataGridView1.Rows.Add("-0,2761", "0,11636");
+                    dataGridView1.Rows.Add("-0,4364", "0,19378");
+                    dataGridView1.Rows.Add("-5,43", "0,37231");
+                    dataGridView1.Rows.Add("18,4318", "0,92665");
+                    dataGridView1.Rows.Add("-7,163", "0,48183");
+                    dataGridView1.Rows.Add("-1,296", "0,28293");
+
+                    dataGridView1.Rows.Add("-0,1481", "0,08899");
+                    dataGridView1.Rows.Add("-0,1926", "0,14135");
+                    dataGridView1.Rows.Add("-0,8431", "0,25048");
+                    dataGridView1.Rows.Add("-7,158", "0,48151");
+                    dataGridView1.Rows.Add("18,1747", "0,96081");
+                    dataGridView1.Rows.Add("-6,191", "0,42585");
+
+                    dataGridView1.Rows.Add("-0,2107", "0,06912");
+                    dataGridView1.Rows.Add("-0,2362", "0,10491");
+                    dataGridView1.Rows.Add("-0,7147", "0,10491");
+                    dataGridView1.Rows.Add("-1,294", "0,17308");
+                    dataGridView1.Rows.Add("-6,189", "0,4257");
+                    dataGridView1.Rows.Add("15,9755", "0,89456");
+
+                    dataGridView1.Rows[0].HeaderCell.Value = "1 1";
+                    dataGridView1.Rows[1].HeaderCell.Value = "1 2";
+                    dataGridView1.Rows[2].HeaderCell.Value = "1 3";
+                    dataGridView1.Rows[3].HeaderCell.Value = "1 4";
+                    dataGridView1.Rows[4].HeaderCell.Value = "1 5";
+                    dataGridView1.Rows[5].HeaderCell.Value = "1 6";
+                    dataGridView1.Rows[6].HeaderCell.Value = "2 1";
+                    dataGridView1.Rows[7].HeaderCell.Value = "2 2";
+                    dataGridView1.Rows[8].HeaderCell.Value = "2 3";
+                    dataGridView1.Rows[9].HeaderCell.Value = "2 4";
+                    dataGridView1.Rows[10].HeaderCell.Value = "2 5";
+                    dataGridView1.Rows[11].HeaderCell.Value = "2 6";
+                    dataGridView1.Rows[12].HeaderCell.Value = "3 1";
+                    dataGridView1.Rows[13].HeaderCell.Value = "3 2";
+                    dataGridView1.Rows[14].HeaderCell.Value = "3 3";
+                    dataGridView1.Rows[15].HeaderCell.Value = "3 4";
+                    dataGridView1.Rows[16].HeaderCell.Value = "3 5";
+                    dataGridView1.Rows[17].HeaderCell.Value = "3 6";
+                    dataGridView1.Rows[18].HeaderCell.Value = "4 1";
+                    dataGridView1.Rows[19].HeaderCell.Value = "4 2";
+                    dataGridView1.Rows[20].HeaderCell.Value = "4 3";
+                    dataGridView1.Rows[21].HeaderCell.Value = "4 4";
+                    dataGridView1.Rows[22].HeaderCell.Value = "4 5";
+                    dataGridView1.Rows[23].HeaderCell.Value = "4 6";
+                    dataGridView1.Rows[24].HeaderCell.Value = "5 1";
+                    dataGridView1.Rows[25].HeaderCell.Value = "5 2";
+                    dataGridView1.Rows[26].HeaderCell.Value = "5 3";
+                    dataGridView1.Rows[27].HeaderCell.Value = "5 4";
+                    dataGridView1.Rows[28].HeaderCell.Value = "5 5";
+                    dataGridView1.Rows[29].HeaderCell.Value = "5 6";
+                    dataGridView1.Rows[30].HeaderCell.Value = "6 1";
+                    dataGridView1.Rows[31].HeaderCell.Value = "6 2";
+                    dataGridView1.Rows[32].HeaderCell.Value = "6 3";
+                    dataGridView1.Rows[33].HeaderCell.Value = "6 4";
+                    dataGridView1.Rows[34].HeaderCell.Value = "6 5";
+                    dataGridView1.Rows[34].HeaderCell.Value = "6 6";
+                    break;                                       
             }
         }
 
