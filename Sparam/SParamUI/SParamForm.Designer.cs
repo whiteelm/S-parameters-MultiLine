@@ -29,29 +29,29 @@ namespace SParamUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series81 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series82 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series83 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series84 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series85 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series86 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series87 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series88 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series89 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series90 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series91 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series92 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series93 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series94 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series95 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series96 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series97 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series98 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series99 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series100 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.NTextBox = new System.Windows.Forms.TextBox();
@@ -78,22 +78,6 @@ namespace SParamUI
             this.mode2 = new System.Windows.Forms.RadioButton();
             this.mode1 = new System.Windows.Forms.RadioButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.Z4Label = new System.Windows.Forms.Label();
-            this.Z3Label = new System.Windows.Forms.Label();
-            this.z4TextBox = new System.Windows.Forms.TextBox();
-            this.z3TextBox = new System.Windows.Forms.TextBox();
-            this.z2TextBox = new System.Windows.Forms.TextBox();
-            this.z1TextBox = new System.Windows.Forms.TextBox();
-            this.Z2Label = new System.Windows.Forms.Label();
-            this.Z1Label = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.z8TextBox = new System.Windows.Forms.TextBox();
-            this.z6TextBox = new System.Windows.Forms.TextBox();
-            this.z7TextBox = new System.Windows.Forms.TextBox();
-            this.z5TextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.z12TextBox = new System.Windows.Forms.TextBox();
@@ -102,6 +86,22 @@ namespace SParamUI
             this.z9TextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.z8TextBox = new System.Windows.Forms.TextBox();
+            this.z6TextBox = new System.Windows.Forms.TextBox();
+            this.z7TextBox = new System.Windows.Forms.TextBox();
+            this.z5TextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Z4Label = new System.Windows.Forms.Label();
+            this.Z3Label = new System.Windows.Forms.Label();
+            this.z4TextBox = new System.Windows.Forms.TextBox();
+            this.z3TextBox = new System.Windows.Forms.TextBox();
+            this.z2TextBox = new System.Windows.Forms.TextBox();
+            this.z1TextBox = new System.Windows.Forms.TextBox();
+            this.Z2Label = new System.Windows.Forms.Label();
+            this.Z1Label = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -164,9 +164,9 @@ namespace SParamUI
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(190, 22);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 13);
+            this.label8.Size = new System.Drawing.Size(71, 13);
             this.label8.TabIndex = 5;
-            this.label8.Text = "Length, m =";
+            this.label8.Text = "Length, mm =";
             // 
             // label7
             // 
@@ -201,7 +201,7 @@ namespace SParamUI
             this.LenTextBox.Name = "LenTextBox";
             this.LenTextBox.Size = new System.Drawing.Size(65, 20);
             this.LenTextBox.TabIndex = 5;
-            this.LenTextBox.Text = "0,01";
+            this.LenTextBox.Text = "1";
             this.LenTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxes_KeyPress);
             // 
             // FmaxTextBox
@@ -254,14 +254,14 @@ namespace SParamUI
             this.dataGridView1.Location = new System.Drawing.Point(3, 16);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.RowHeadersWidth = 55;
             this.dataGridView1.Size = new System.Drawing.Size(208, 339);
             this.dataGridView1.TabIndex = 4;
@@ -283,143 +283,143 @@ namespace SParamUI
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea5.AxisX.Title = "Частота (ГГц)";
-            chartArea5.AxisY.Title = "S-параметры (дБ) ";
-            chartArea5.BorderColor = System.Drawing.Color.Transparent;
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart1.Legends.Add(legend5);
+            chartArea1.AxisX.Title = "Частота (ГГц)";
+            chartArea1.AxisY.Title = "S-параметры (дБ) ";
+            chartArea1.BorderColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(6, 42);
             this.chart1.Name = "chart1";
-            series81.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            series81.ChartArea = "ChartArea1";
-            series81.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series81.Color = System.Drawing.Color.Red;
-            series81.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            series81.Legend = "Legend1";
-            series81.MarkerBorderColor = System.Drawing.Color.Red;
-            series81.MarkerColor = System.Drawing.Color.Red;
-            series81.MarkerImageTransparentColor = System.Drawing.Color.Red;
-            series81.Name = "S11";
-            series82.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            series82.ChartArea = "ChartArea1";
-            series82.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series82.Color = System.Drawing.Color.IndianRed;
-            series82.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            series82.Legend = "Legend1";
-            series82.Name = "S12";
-            series83.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
-            series83.ChartArea = "ChartArea1";
-            series83.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series83.Color = System.Drawing.Color.Gold;
-            series83.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            series83.Legend = "Legend1";
-            series83.Name = "S13";
-            series84.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            series84.ChartArea = "ChartArea1";
-            series84.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series84.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            series84.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            series84.Legend = "Legend1";
-            series84.Name = "S14";
-            series85.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            series85.ChartArea = "ChartArea1";
-            series85.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series85.Color = System.Drawing.Color.Fuchsia;
-            series85.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            series85.Legend = "Legend1";
-            series85.Name = "S22";
-            series86.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            series86.ChartArea = "ChartArea1";
-            series86.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series86.Color = System.Drawing.Color.Lime;
-            series86.Legend = "Legend1";
-            series86.Name = "S23";
-            series87.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
-            series87.ChartArea = "ChartArea1";
-            series87.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series87.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            series87.Legend = "Legend1";
-            series87.Name = "S24";
-            series88.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            series88.ChartArea = "ChartArea1";
-            series88.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series88.Color = System.Drawing.Color.Black;
-            series88.Legend = "Legend1";
-            series88.Name = "S33";
-            series89.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
-            series89.ChartArea = "ChartArea1";
-            series89.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series89.Color = System.Drawing.Color.Gray;
-            series89.Legend = "Legend1";
-            series89.Name = "S34";
-            series90.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            series90.ChartArea = "ChartArea1";
-            series90.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series90.Color = System.Drawing.Color.Blue;
-            series90.Legend = "Legend1";
-            series90.Name = "S44";
-            series91.ChartArea = "ChartArea1";
-            series91.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series91.Legend = "Legend1";
-            series91.Name = "φ11";
-            series92.ChartArea = "ChartArea1";
-            series92.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series92.Legend = "Legend1";
-            series92.Name = "φ12";
-            series93.ChartArea = "ChartArea1";
-            series93.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series93.Legend = "Legend1";
-            series93.Name = "φ13";
-            series94.ChartArea = "ChartArea1";
-            series94.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series94.Legend = "Legend1";
-            series94.Name = "φ14";
-            series95.ChartArea = "ChartArea1";
-            series95.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series95.Legend = "Legend1";
-            series95.Name = "φ22";
-            series96.ChartArea = "ChartArea1";
-            series96.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series96.Legend = "Legend1";
-            series96.Name = "φ23";
-            series97.ChartArea = "ChartArea1";
-            series97.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series97.Legend = "Legend1";
-            series97.Name = "φ24";
-            series98.ChartArea = "ChartArea1";
-            series98.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series98.Legend = "Legend1";
-            series98.Name = "φ33";
-            series99.ChartArea = "ChartArea1";
-            series99.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series99.Legend = "Legend1";
-            series99.Name = "φ34";
-            series100.ChartArea = "ChartArea1";
-            series100.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series100.Legend = "Legend1";
-            series100.Name = "φ44";
-            this.chart1.Series.Add(series81);
-            this.chart1.Series.Add(series82);
-            this.chart1.Series.Add(series83);
-            this.chart1.Series.Add(series84);
-            this.chart1.Series.Add(series85);
-            this.chart1.Series.Add(series86);
-            this.chart1.Series.Add(series87);
-            this.chart1.Series.Add(series88);
-            this.chart1.Series.Add(series89);
-            this.chart1.Series.Add(series90);
-            this.chart1.Series.Add(series91);
-            this.chart1.Series.Add(series92);
-            this.chart1.Series.Add(series93);
-            this.chart1.Series.Add(series94);
-            this.chart1.Series.Add(series95);
-            this.chart1.Series.Add(series96);
-            this.chart1.Series.Add(series97);
-            this.chart1.Series.Add(series98);
-            this.chart1.Series.Add(series99);
-            this.chart1.Series.Add(series100);
+            series1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Color = System.Drawing.Color.Red;
+            series1.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            series1.Legend = "Legend1";
+            series1.MarkerBorderColor = System.Drawing.Color.Red;
+            series1.MarkerColor = System.Drawing.Color.Red;
+            series1.MarkerImageTransparentColor = System.Drawing.Color.Red;
+            series1.Name = "S11";
+            series2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.IndianRed;
+            series2.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            series2.Legend = "Legend1";
+            series2.Name = "S12";
+            series3.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Color = System.Drawing.Color.Gold;
+            series3.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            series3.Legend = "Legend1";
+            series3.Name = "S13";
+            series4.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            series4.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            series4.Legend = "Legend1";
+            series4.Name = "S14";
+            series5.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Color = System.Drawing.Color.Fuchsia;
+            series5.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            series5.Legend = "Legend1";
+            series5.Name = "S22";
+            series6.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Color = System.Drawing.Color.Lime;
+            series6.Legend = "Legend1";
+            series6.Name = "S23";
+            series7.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            series7.Legend = "Legend1";
+            series7.Name = "S24";
+            series8.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.Color = System.Drawing.Color.Black;
+            series8.Legend = "Legend1";
+            series8.Name = "S33";
+            series9.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series9.Color = System.Drawing.Color.Gray;
+            series9.Legend = "Legend1";
+            series9.Name = "S34";
+            series10.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series10.Color = System.Drawing.Color.Blue;
+            series10.Legend = "Legend1";
+            series10.Name = "S44";
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series11.Legend = "Legend1";
+            series11.Name = "φ11";
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series12.Legend = "Legend1";
+            series12.Name = "φ12";
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series13.Legend = "Legend1";
+            series13.Name = "φ13";
+            series14.ChartArea = "ChartArea1";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series14.Legend = "Legend1";
+            series14.Name = "φ14";
+            series15.ChartArea = "ChartArea1";
+            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series15.Legend = "Legend1";
+            series15.Name = "φ22";
+            series16.ChartArea = "ChartArea1";
+            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series16.Legend = "Legend1";
+            series16.Name = "φ23";
+            series17.ChartArea = "ChartArea1";
+            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series17.Legend = "Legend1";
+            series17.Name = "φ24";
+            series18.ChartArea = "ChartArea1";
+            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series18.Legend = "Legend1";
+            series18.Name = "φ33";
+            series19.ChartArea = "ChartArea1";
+            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series19.Legend = "Legend1";
+            series19.Name = "φ34";
+            series20.ChartArea = "ChartArea1";
+            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series20.Legend = "Legend1";
+            series20.Name = "φ44";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
+            this.chart1.Series.Add(series3);
+            this.chart1.Series.Add(series4);
+            this.chart1.Series.Add(series5);
+            this.chart1.Series.Add(series6);
+            this.chart1.Series.Add(series7);
+            this.chart1.Series.Add(series8);
+            this.chart1.Series.Add(series9);
+            this.chart1.Series.Add(series10);
+            this.chart1.Series.Add(series11);
+            this.chart1.Series.Add(series12);
+            this.chart1.Series.Add(series13);
+            this.chart1.Series.Add(series14);
+            this.chart1.Series.Add(series15);
+            this.chart1.Series.Add(series16);
+            this.chart1.Series.Add(series17);
+            this.chart1.Series.Add(series18);
+            this.chart1.Series.Add(series19);
+            this.chart1.Series.Add(series20);
             this.chart1.Size = new System.Drawing.Size(511, 310);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
@@ -554,77 +554,77 @@ namespace SParamUI
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
             // 
-            // Z4Label
+            // label10
             // 
-            this.Z4Label.AutoSize = true;
-            this.Z4Label.Enabled = false;
-            this.Z4Label.Location = new System.Drawing.Point(121, 46);
-            this.Z4Label.Name = "Z4Label";
-            this.Z4Label.Size = new System.Drawing.Size(35, 13);
-            this.Z4Label.TabIndex = 16;
-            this.Z4Label.Text = "Z4, Ω";
+            this.label10.AutoSize = true;
+            this.label10.Enabled = false;
+            this.label10.Location = new System.Drawing.Point(121, 146);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 13);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Z12, Ω";
             // 
-            // Z3Label
+            // label11
             // 
-            this.Z3Label.AutoSize = true;
-            this.Z3Label.Enabled = false;
-            this.Z3Label.Location = new System.Drawing.Point(121, 22);
-            this.Z3Label.Name = "Z3Label";
-            this.Z3Label.Size = new System.Drawing.Size(35, 13);
-            this.Z3Label.TabIndex = 15;
-            this.Z3Label.Text = "Z3, Ω";
+            this.label11.AutoSize = true;
+            this.label11.Enabled = false;
+            this.label11.Location = new System.Drawing.Point(121, 122);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(41, 13);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Z10, Ω";
             // 
-            // z4TextBox
+            // z12TextBox
             // 
-            this.z4TextBox.Enabled = false;
-            this.z4TextBox.Location = new System.Drawing.Point(171, 43);
-            this.z4TextBox.Name = "z4TextBox";
-            this.z4TextBox.Size = new System.Drawing.Size(52, 20);
-            this.z4TextBox.TabIndex = 14;
-            this.z4TextBox.Text = "50";
+            this.z12TextBox.Enabled = false;
+            this.z12TextBox.Location = new System.Drawing.Point(171, 143);
+            this.z12TextBox.Name = "z12TextBox";
+            this.z12TextBox.Size = new System.Drawing.Size(52, 20);
+            this.z12TextBox.TabIndex = 30;
+            this.z12TextBox.Text = "50";
             // 
-            // z3TextBox
+            // z10TextBox
             // 
-            this.z3TextBox.Enabled = false;
-            this.z3TextBox.Location = new System.Drawing.Point(171, 19);
-            this.z3TextBox.Name = "z3TextBox";
-            this.z3TextBox.Size = new System.Drawing.Size(52, 20);
-            this.z3TextBox.TabIndex = 13;
-            this.z3TextBox.Text = "50";
+            this.z10TextBox.Enabled = false;
+            this.z10TextBox.Location = new System.Drawing.Point(171, 119);
+            this.z10TextBox.Name = "z10TextBox";
+            this.z10TextBox.Size = new System.Drawing.Size(52, 20);
+            this.z10TextBox.TabIndex = 29;
+            this.z10TextBox.Text = "50";
             // 
-            // z2TextBox
+            // z11TextBox
             // 
-            this.z2TextBox.Location = new System.Drawing.Point(59, 45);
-            this.z2TextBox.Name = "z2TextBox";
-            this.z2TextBox.Size = new System.Drawing.Size(52, 20);
-            this.z2TextBox.TabIndex = 12;
-            this.z2TextBox.Text = "50";
+            this.z11TextBox.Location = new System.Drawing.Point(59, 145);
+            this.z11TextBox.Name = "z11TextBox";
+            this.z11TextBox.Size = new System.Drawing.Size(52, 20);
+            this.z11TextBox.TabIndex = 28;
+            this.z11TextBox.Text = "50";
             // 
-            // z1TextBox
+            // z9TextBox
             // 
-            this.z1TextBox.Location = new System.Drawing.Point(59, 19);
-            this.z1TextBox.Name = "z1TextBox";
-            this.z1TextBox.Size = new System.Drawing.Size(52, 20);
-            this.z1TextBox.TabIndex = 11;
-            this.z1TextBox.Text = "50";
+            this.z9TextBox.Location = new System.Drawing.Point(59, 119);
+            this.z9TextBox.Name = "z9TextBox";
+            this.z9TextBox.Size = new System.Drawing.Size(52, 20);
+            this.z9TextBox.TabIndex = 27;
+            this.z9TextBox.Text = "50";
             // 
-            // Z2Label
+            // label12
             // 
-            this.Z2Label.AutoSize = true;
-            this.Z2Label.Location = new System.Drawing.Point(9, 48);
-            this.Z2Label.Name = "Z2Label";
-            this.Z2Label.Size = new System.Drawing.Size(35, 13);
-            this.Z2Label.TabIndex = 10;
-            this.Z2Label.Text = "Z2, Ω";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(9, 148);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "Z11, Ω";
             // 
-            // Z1Label
+            // label13
             // 
-            this.Z1Label.AutoSize = true;
-            this.Z1Label.Location = new System.Drawing.Point(9, 22);
-            this.Z1Label.Name = "Z1Label";
-            this.Z1Label.Size = new System.Drawing.Size(35, 13);
-            this.Z1Label.TabIndex = 9;
-            this.Z1Label.Text = "Z1, Ω";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(9, 122);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(35, 13);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "Z9, Ω";
             // 
             // label2
             // 
@@ -699,77 +699,77 @@ namespace SParamUI
             this.label9.TabIndex = 17;
             this.label9.Text = "Z5, Ω";
             // 
-            // label10
+            // Z4Label
             // 
-            this.label10.AutoSize = true;
-            this.label10.Enabled = false;
-            this.label10.Location = new System.Drawing.Point(121, 146);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 32;
-            this.label10.Text = "Z12, Ω";
+            this.Z4Label.AutoSize = true;
+            this.Z4Label.Enabled = false;
+            this.Z4Label.Location = new System.Drawing.Point(121, 46);
+            this.Z4Label.Name = "Z4Label";
+            this.Z4Label.Size = new System.Drawing.Size(35, 13);
+            this.Z4Label.TabIndex = 16;
+            this.Z4Label.Text = "Z4, Ω";
             // 
-            // label11
+            // Z3Label
             // 
-            this.label11.AutoSize = true;
-            this.label11.Enabled = false;
-            this.label11.Location = new System.Drawing.Point(121, 122);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "Z10, Ω";
+            this.Z3Label.AutoSize = true;
+            this.Z3Label.Enabled = false;
+            this.Z3Label.Location = new System.Drawing.Point(121, 22);
+            this.Z3Label.Name = "Z3Label";
+            this.Z3Label.Size = new System.Drawing.Size(35, 13);
+            this.Z3Label.TabIndex = 15;
+            this.Z3Label.Text = "Z3, Ω";
             // 
-            // z12TextBox
+            // z4TextBox
             // 
-            this.z12TextBox.Enabled = false;
-            this.z12TextBox.Location = new System.Drawing.Point(171, 143);
-            this.z12TextBox.Name = "z12TextBox";
-            this.z12TextBox.Size = new System.Drawing.Size(52, 20);
-            this.z12TextBox.TabIndex = 30;
-            this.z12TextBox.Text = "50";
+            this.z4TextBox.Enabled = false;
+            this.z4TextBox.Location = new System.Drawing.Point(171, 43);
+            this.z4TextBox.Name = "z4TextBox";
+            this.z4TextBox.Size = new System.Drawing.Size(52, 20);
+            this.z4TextBox.TabIndex = 14;
+            this.z4TextBox.Text = "50";
             // 
-            // z10TextBox
+            // z3TextBox
             // 
-            this.z10TextBox.Enabled = false;
-            this.z10TextBox.Location = new System.Drawing.Point(171, 119);
-            this.z10TextBox.Name = "z10TextBox";
-            this.z10TextBox.Size = new System.Drawing.Size(52, 20);
-            this.z10TextBox.TabIndex = 29;
-            this.z10TextBox.Text = "50";
+            this.z3TextBox.Enabled = false;
+            this.z3TextBox.Location = new System.Drawing.Point(171, 19);
+            this.z3TextBox.Name = "z3TextBox";
+            this.z3TextBox.Size = new System.Drawing.Size(52, 20);
+            this.z3TextBox.TabIndex = 13;
+            this.z3TextBox.Text = "50";
             // 
-            // z11TextBox
+            // z2TextBox
             // 
-            this.z11TextBox.Location = new System.Drawing.Point(59, 145);
-            this.z11TextBox.Name = "z11TextBox";
-            this.z11TextBox.Size = new System.Drawing.Size(52, 20);
-            this.z11TextBox.TabIndex = 28;
-            this.z11TextBox.Text = "50";
+            this.z2TextBox.Location = new System.Drawing.Point(59, 45);
+            this.z2TextBox.Name = "z2TextBox";
+            this.z2TextBox.Size = new System.Drawing.Size(52, 20);
+            this.z2TextBox.TabIndex = 12;
+            this.z2TextBox.Text = "50";
             // 
-            // z9TextBox
+            // z1TextBox
             // 
-            this.z9TextBox.Location = new System.Drawing.Point(59, 119);
-            this.z9TextBox.Name = "z9TextBox";
-            this.z9TextBox.Size = new System.Drawing.Size(52, 20);
-            this.z9TextBox.TabIndex = 27;
-            this.z9TextBox.Text = "50";
+            this.z1TextBox.Location = new System.Drawing.Point(59, 19);
+            this.z1TextBox.Name = "z1TextBox";
+            this.z1TextBox.Size = new System.Drawing.Size(52, 20);
+            this.z1TextBox.TabIndex = 11;
+            this.z1TextBox.Text = "50";
             // 
-            // label12
+            // Z2Label
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(9, 148);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 13);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "Z11, Ω";
+            this.Z2Label.AutoSize = true;
+            this.Z2Label.Location = new System.Drawing.Point(9, 48);
+            this.Z2Label.Name = "Z2Label";
+            this.Z2Label.Size = new System.Drawing.Size(35, 13);
+            this.Z2Label.TabIndex = 10;
+            this.Z2Label.Text = "Z2, Ω";
             // 
-            // label13
+            // Z1Label
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(9, 122);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(35, 13);
-            this.label13.TabIndex = 25;
-            this.label13.Text = "Z9, Ω";
+            this.Z1Label.AutoSize = true;
+            this.Z1Label.Location = new System.Drawing.Point(9, 22);
+            this.Z1Label.Name = "Z1Label";
+            this.Z1Label.Size = new System.Drawing.Size(35, 13);
+            this.Z1Label.TabIndex = 9;
+            this.Z1Label.Text = "Z1, Ω";
             // 
             // SParamForm
             // 

@@ -134,37 +134,31 @@ namespace SParamUI
             {
                 t.Points.Clear();
             }
-            var interval = Convert.ToDouble(
-                (Convert.ToDouble(sParameters.Fmax) -
-                 Convert.ToDouble(sParameters.Fmin)) /
-                 Convert.ToDouble(sParameters.Nf));
-            var points = Convert.ToDouble(sParameters.Fmin);
-            for (var i = 2; i < sParameters.Nf; i++)
+            for (var i = 1; i < sParameters.Nf; i++)
             {
-                chart1.Series[0].Points.AddXY(points, sParameters.S[0][i]);
-                chart1.Series[1].Points.AddXY(points, sParameters.S[1][i]);
-                chart1.Series[2].Points.AddXY(points, sParameters.S[2][i]);
-                chart1.Series[10].Points.AddXY(points, sParameters.Fi[0][i]);
-                chart1.Series[11].Points.AddXY(points, sParameters.Fi[1][i]);
-                chart1.Series[12].Points.AddXY(points, sParameters.Fi[2][i]);
+                chart1.Series[0].Points.AddXY(sParameters.F[i], sParameters.S[0][i]);
+                chart1.Series[1].Points.AddXY(sParameters.F[i], sParameters.S[1][i]);
+                chart1.Series[2].Points.AddXY(sParameters.F[i], sParameters.S[2][i]);
+                chart1.Series[10].Points.AddXY(sParameters.F[i], sParameters.Fi[0][i]);
+                chart1.Series[11].Points.AddXY(sParameters.F[i], sParameters.Fi[1][i]);
+                chart1.Series[12].Points.AddXY(sParameters.F[i], sParameters.Fi[2][i]);
                 if (mode1.Checked)
                 {
-                    chart1.Series[3].Points.AddXY(points, sParameters.S[3][i]);
-                    chart1.Series[4].Points.AddXY(points, sParameters.S[4][i]);
-                    chart1.Series[5].Points.AddXY(points, sParameters.S[5][i]);
-                    chart1.Series[6].Points.AddXY(points, sParameters.S[6][i]);
-                    chart1.Series[7].Points.AddXY(points, sParameters.S[7][i]);
-                    chart1.Series[8].Points.AddXY(points, sParameters.S[8][i]);
-                    chart1.Series[9].Points.AddXY(points, sParameters.S[9][i]);
-                    chart1.Series[13].Points.AddXY(points, sParameters.Fi[3][i]);
-                    chart1.Series[14].Points.AddXY(points, sParameters.Fi[4][i]);
-                    chart1.Series[15].Points.AddXY(points, sParameters.Fi[5][i]);
-                    chart1.Series[16].Points.AddXY(points, sParameters.Fi[6][i]);
-                    chart1.Series[17].Points.AddXY(points, sParameters.Fi[7][i]);
-                    chart1.Series[18].Points.AddXY(points, sParameters.Fi[8][i]);
-                    chart1.Series[19].Points.AddXY(points, sParameters.Fi[9][i]);
+                    chart1.Series[3].Points.AddXY(sParameters.F[i], sParameters.S[3][i]);
+                    chart1.Series[4].Points.AddXY(sParameters.F[i], sParameters.S[4][i]);
+                    chart1.Series[5].Points.AddXY(sParameters.F[i], sParameters.S[5][i]);
+                    chart1.Series[6].Points.AddXY(sParameters.F[i], sParameters.S[6][i]);
+                    chart1.Series[7].Points.AddXY(sParameters.F[i], sParameters.S[7][i]);
+                    chart1.Series[8].Points.AddXY(sParameters.F[i], sParameters.S[8][i]);
+                    chart1.Series[9].Points.AddXY(sParameters.F[i], sParameters.S[9][i]);
+                    chart1.Series[13].Points.AddXY(sParameters.F[i], sParameters.Fi[3][i]);
+                    chart1.Series[14].Points.AddXY(sParameters.F[i], sParameters.Fi[4][i]);
+                    chart1.Series[15].Points.AddXY(sParameters.F[i], sParameters.Fi[5][i]);
+                    chart1.Series[16].Points.AddXY(sParameters.F[i], sParameters.Fi[6][i]);
+                    chart1.Series[17].Points.AddXY(sParameters.F[i], sParameters.Fi[7][i]);
+                    chart1.Series[18].Points.AddXY(sParameters.F[i], sParameters.Fi[8][i]);
+                    chart1.Series[19].Points.AddXY(sParameters.F[i], sParameters.Fi[9][i]);
                 }
-                points += interval;
             }
             chart1.ChartAreas[0].AxisX.Minimum = sParameters.Fmin;
             chart1.ChartAreas[0].AxisX.Maximum = sParameters.Fmax;

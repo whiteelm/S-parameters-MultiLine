@@ -13,6 +13,11 @@ namespace SParameters
         public int Nf { get; set; }
 
         /// <summary>
+        /// Точки.
+        /// </summary>
+        public double [] F;
+
+        /// <summary>
         /// Начало частотных точек.
         /// </summary>
         public int Fmin { get; set; }
@@ -135,7 +140,7 @@ namespace SParameters
             Nf = nf;
             Fmin = fmin;
             Fmax = fmax;
-            Len = len;
+            Len = len/1000;
 
             L = l;
             C = c;
@@ -153,7 +158,7 @@ namespace SParameters
         /// </summary>
         public void CalculateSParameters(int mode)
         {
-            var f = Vector<double>.Build.Dense(Nf);
+            F = new double[Nf];
             var w = Vector<double>.Build.Dense(Nf);
             var dl = Matrix<double>.Build.DenseOfArray(L);
             var dc = Matrix<double>.Build.DenseOfArray(C);
@@ -163,9 +168,9 @@ namespace SParameters
             var eps = c * c * eigen.EigenValues.Real();
             for (var i = 0; i < Nf; i++)
             {
-                f[i] = Fmin + ((double)Fmax - Fmin) /
+                F[i] = Fmin + ((double)Fmax - Fmin) /
                     ((double)Nf - 1) * i;
-                w[i] = 2 * Math.PI * f[i];
+                w[i] = 2 * Math.PI * F[i];
             }
 
             var um = eigen.EigenVectors;
@@ -224,19 +229,6 @@ namespace SParameters
                     umComplex[i, j] = um[i, j];
                 }
             }
-            //for (var k = 0; k < Nf; k++)
-            //{
-            //    for (var i = 0; i < im.ColumnCount; i++)
-            //    {
-            //        for (var j = 0; j < im.ColumnCount; j++)
-            //        {
-            //            yaa.Add(Matrix<Complex>.Build.Dense(N, N));
-            //            yab.Add(Matrix<Complex>.Build.Dense(N, N));
-            //            yaa[k][i, j] = i + j;
-            //            yab[k][i, j] = i + j + 10;
-            //        }
-            //    }
-            //}
             for (var i = 0; i < Nf; i++)
             {
                 yaa.Add(imComplex * co[i] * (umComplex.Inverse()));
